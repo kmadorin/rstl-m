@@ -1,0 +1,27 @@
+include ../tarifs/tarifs
+mixin acc(data)
+  .acc
+    .acc__tab.acc__tab--internet.acc__tab--active
+      input#tab-internet(type='checkbox', name='acc', checked).acc__input
+      label(for='tab-internet').acc-btn.acc-btn--internet
+        span.acc-btn__text Интернет
+      .acc__content
+        +tarifs()
+    .acc__tab.acc__tab--packages
+      input#tab-packages(type='checkbox', name='acc').acc__input
+      label(for='tab-packages').acc-btn.acc-btn--packages
+        span.acc-btn__text Пакеты услуг
+      .acc__content
+        +tarifs()
+    .acc__tab.acc__tab--tv
+      input#tab-tv(type='checkbox', name='acc').acc__input
+      label(for='tab-tv').acc-btn.acc-btn--tv
+        span.acc-btn__text Телевидение
+      .acc__content
+        +tarifs()
+    .acc__tab.acc__tab--tel
+      input#tab-tel(type='checkbox', name='acc').acc__input
+      label(for='tab-tel').acc-btn.acc-btn--tel
+        span.acc-btn__text Телефония
+      .acc__content
+        +tarifs()

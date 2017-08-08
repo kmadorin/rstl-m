@@ -1,0 +1,12 @@
+include ../main-nav/main-nav
+mixin page-header(data)
+  .page-header
+    +main-nav()
+    .page-header__container
+      h1.page-header__heading Подключение Ростелеком в Санкт-Петербурге и ЛО
+      .page-header__contacts
+        a(href="tel:+78126271430 ").page-header__tel +7 (812) 627-14-30
+        time.page-header__timetable с 09:00 до 22:00 (без выходных)
+      .page-header__callback
+        a(href="#", data-popup="call").page-header__callbackbtn.btn.btn--orange Обратный звонок
+        a(href="#", data-popup="step1").page-header__callbacklink Проверить возможность подключения

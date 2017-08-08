@@ -1,0 +1,11 @@
+.tarifs {
+  &__container {
+    padding: 12px 10px;
+  }
+  &__tarif {
+    margin-top: 20px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+.tarif {
+  margin-top: 36px;
+  padding-top: 22px;
+  box-sizing: border-box;
+  &:first-child {
+    margin-top: 0;
+  }
+  background: #FFF;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.05), 0 0px 20px rgba(0,0,0,0.02);
+  &:before {
+    content: "Акция";
+    display: none;
+    height: 38px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    border-radius: 3px;
+    background-color: #d73636;
+    text-transform: uppercase;
+    line-height: 38px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fffefe;
+  }
+  &--action {
+    border: solid 1px #d73636;
+    &:before {
+      display: inline-block;
+    }
+  }
+  &__heading {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #111;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  &__text {
+    color: #555;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+  }
+  &__chars {
+    @include nl;
+    padding-top: 15px;
+    padding-bottom: 26px;
+    font-size: 0;
+  }
+  &__char {
+    display: block;
+    margin-top: 10px;
+    vertical-align: middle;
+    &:first-child {
+      margin-top: 0;
+    }
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 18px;
+      line-height: 1.33;
+      color: #3b849a;
+    }
+  }
+  &__icon {
+    fill: #5eabc2;
+    margin-right: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    &--tel {
+      position: relative;
+      top: -2px;
+    }
+  }
+  &__price {
+    width: 200px;
+  }
+  &__pricenumber {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 0.8;
+    color: #111111;
+    display: block;
+  }
+  &__btns {
+    margin-top: 23px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__btn {
+    display: block;
+    padding: 12px 17px;
+    margin-left: auto;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

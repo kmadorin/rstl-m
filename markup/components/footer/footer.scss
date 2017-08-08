@@ -1,0 +1,42 @@
+.page-footer {
+  &__top {
+    background-color: white;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.03);
+    padding: 25px 5px;
+  }
+  &__contacts {
+    @include nl;
+    text-align: center;
+  }
+  &__contact {
+    font-size: 16px;
+    color: #373737;
+    font-weight: 600;
+    line-height: 24px;
+    margin-top: 18px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  &__text {
+    padding: 0;
+    margin: 0;
+    color: #6e6d6d;
+    font-weight: 400;
+    line-height: 18px;
+    a {
+      text-decoration: none;
+      color: #6e6d6d;
+    }
+  }
+  &__bottom {
+    padding: 25px 40px;
+    text-align: center;
+  }
+  &__copy {
+    margin: 0;
+    color: #8c8c8c;
+    font-size: 13px;
+    font-weight: 400;
+  }
+}

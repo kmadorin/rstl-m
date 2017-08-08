@@ -1,0 +1,11 @@
+mixin order(data)
+  section.order
+    .order__container
+      h2.order__heading Заявка на подключение
+      form.order-form
+        .order-form__field
+          input(type="text", id="order-name", name="order-name", placeholder="Ваше имя")
+        .order-form__field
+          input(type="text", id="order-tel", name="order-tel", placeholder="Ваш телефон")
+        .order-form__submit
+          button(type="submit").btn.btn--blue Подключить

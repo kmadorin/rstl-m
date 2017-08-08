@@ -1,0 +1,36 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/page-header/page-header
+    include ../components/order/order
+    include ../components/map/map
+    include ../components/acc/acc
+    include ../components/popup/popup
+    include ../components/footer/footer
+
+    head
+        +head(head.index)
+    body.page
+        |%=symbols=%
+
+        div.page__wrapper
+            +page-header()
+            +acc()
+            +order()
+            +map()
+
+            .page__footer
+                +footer()
+            .popup__overlay
+            +popup('call')
+            +popup('turnon')
+            +popup('tarif')
+            +popup('thanks')
+            +popup('step1')
+            +popup('step2')
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

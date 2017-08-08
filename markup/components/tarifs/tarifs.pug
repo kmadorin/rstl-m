@@ -1,0 +1,10 @@
+include ../tarif/tarif
+mixin tarifs(data)
+  section.tarifs
+    .tarifs__container
+      .tarifs__tarif
+        +tarif('action')
+      .tarifs__tarif
+        +tarif()
+      .tarifs__tarif
+        +tarif()

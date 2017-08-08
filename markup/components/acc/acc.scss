@@ -1,0 +1,36 @@
+/* Acordeon styles */
+.acc {
+  &__tab {
+    position: relative;
+    width: 100%;
+    margin-top: 1px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  &__input {
+    display: none;
+  }
+  &__content {
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: height .05s;
+    -o-transition: height .05s;
+    transition: height .05s;
+  }
+
+  /* :checked */
+  &__input:checked ~ .acc__content {
+    height: auto ;
+  }
+
+  &__input:checked + .acc-btn {
+    background-color: #00a6e7;
+  }
+
+  &__input:checked + .acc-btn::after {
+    transform: rotateX(180deg);
+    @include bg($acc-down-active-icon);
+  }
+}
+

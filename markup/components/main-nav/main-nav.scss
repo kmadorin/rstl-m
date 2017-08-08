@@ -1,0 +1,166 @@
+.main-nav {
+  position: fixed;
+  z-index: 300;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.03);
+  &__wrapper {
+    position: relative;
+    min-width: 320px;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  &__top {
+    height: 64px;
+    padding-left: 18px;
+    box-sizing: border-box;
+    padding-top: 16px;
+    @include cf;
+    transition: background .2s ease-in;
+  }
+  &--fixed {
+    .main-nav__top {
+      background: #FFF;
+    }
+    .main-nav__contacts {
+      opacity: 1;
+    }
+  }
+  &__overlay {
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    padding-top: 40px;
+    background: #00A6E7;
+    &--active {
+      display: block;
+    }
+  }
+  &__footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+    margin-top: auto;
+    background: #216C86;
+    padding: 22px 10px 20px 10px;
+    text-align: center;
+  }
+  &__callbacktel {
+    display: block;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 16px;
+  }
+  &__callbackbtn {
+    text-transform: uppercase;
+  }
+  &__logo {
+    width: 18px;
+    height: 28px;
+    margin-right: 14px;
+    margin-top: 3px;
+    float: left;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__contacts {
+    width: 160px;
+    float: left;
+    opacity: 0;
+    transition: opacity .2s ease;
+  }
+  &__name {
+    margin: 0;
+    color: #00abea;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  &__tel {
+    color: #ff7600;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    text-decoration: none;
+  }
+  &__toggle {
+    width: 86px;
+    float: right;
+    margin-right: 20px;
+    position: relative;
+    padding-left: 28px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    margin-top: 3px;
+  }
+  &__burger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    span {
+      width: 16px;
+      height: 3px;
+      display: block;
+      background: #111;
+      position: relative;
+      margin-top: 12px;
+      &:before, &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        height: 3px;
+        background: #111;
+        width: 100%;
+      }
+      &:before {
+        top: -6px;
+        margin-bottom: 6px;
+      }
+      &:after {
+        margin-top: 6px;
+      }
+    }
+  }
+  &__toggletext {
+    color: #111;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
+.main-menu {
+  @include nl;
+  width: 100%;
+  &__link {
+    display: block;
+    background: #00a6e7;
+    &:after {
+      display: none;
+    }
+    &--active {
+      background: #216C86;
+    }
+  }
+  &__close {
+    font-size: 0;
+    display: block;
+    position: absolute;
+    right: 14px;
+    top: 18px;
+    @include bg($popup-close);
+    text-decoration: none;
+  }
+}

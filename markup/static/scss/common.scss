@@ -1,0 +1,23 @@
+// Common styles of the project
+
+html, body {
+  min-height: 100%;
+}
+
+.page {
+  font-family: $opensans;
+}
+
+.page__wrapper {
+  min-height: 100%;
+  max-width: 768px;
+  min-width: 320px;
+  margin: 0 auto;
+  position: relative;
+  background: url('%=static=%/general/page-bg.jpg') 0 0 no-repeat;
+  background-size: cover;
+}
+
+* html .page__wrapper {
+    height: 100%;
+}
